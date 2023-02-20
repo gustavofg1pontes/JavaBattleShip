@@ -11,7 +11,7 @@ public class Board {
     private List<Ship> shipsOffTheBoard = new ArrayList<>();
 
     public Board() {
-        this.board = new Ship[8][8];
+        this.board = new Ship[10][10];
     }
 
     public void addShip(Ship ship) {
