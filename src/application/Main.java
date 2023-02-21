@@ -4,6 +4,8 @@ import battleship.BattleshipMatch;
 import battleship.ship.Position;
 import battleship.ship.Ship;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -16,13 +18,10 @@ public class Main {
             System.out.println("Adding ships: ");
             UI.drawBoard(match);
             System.out.println("Waiting player " + match.getPlayer());
-            System.out.print("What's the ship's size? (1, 2, 3) ");
-            int size = sc.nextInt();
-            System.out.print("X ");
+            System.out.print("X: ");
             int x = sc.nextInt();
-            System.out.print("Y ");
+            System.out.print("Y: ");
             int y = sc.nextInt();
-            match.getCurrentBoard().addShip(new Ship(new Position(x, y), size, 0));
         }
     }
 }

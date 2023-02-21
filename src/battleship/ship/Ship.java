@@ -12,6 +12,11 @@ public class Ship {
         this.position = position;
         this.size = 1;
     }
+
+    public Ship(int size) {
+        this.size = size;
+    }
+
     public Ship(Position position, int size, int dir) {
         this.position = position;
         this.size = size;
