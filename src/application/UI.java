@@ -1,14 +1,15 @@
 package application;
 
 import battleship.BattleshipMatch;
+import battleship.Board;
 import battleship.ship.Ship;
 
 public class UI {
-    public static void drawBoard(BattleshipMatch match) {
-        for (int i = 0; i < match.getCurrentBoard().getBoard().length; i++) {
+    public static void drawBoard(Board board) {
+        for (int i = 0; i < board.getBoard().length; i++) {
             System.out.print((10 - i) + ((10 - i == 10) ? " " : "  "));
-            for (int j = 0; j < match.getCurrentBoard().getBoard().length; j++) {
-                printShip(match.getCurrentBoard().getBoard()[i][j]);
+            for (int j = 0; j < board.getBoard().length; j++) {
+                printShip(board.getBoard()[i][j]);
             }
             System.out.println();
         }
