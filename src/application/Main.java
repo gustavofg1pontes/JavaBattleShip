@@ -1,23 +1,22 @@
 package application;
 
 import battleship.BattleshipMatch;
-import battleship.ship.Position;
-import battleship.ship.Ship;
+import ship.Ship;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         BattleshipMatch match = new BattleshipMatch();
-        List<Ship> shipsToAdd = match.getCurrentBoard().initializeShipsToAdd();
+        List<Ship> shipsToAdd = match.initializeShipsToAdd();
         Scanner sc = new Scanner(System.in);
 
-        UI.clearScreen();
+        //adding ships
         match.getCurrentBoard().addShips(shipsToAdd, sc);
-        match.changePlayer();
-        shipsToAdd = match.getCurrentBoard().initializeShipsToAdd();
+        match.changePlayer(sc);
         match.getCurrentBoard().addShips(shipsToAdd, sc);
+        shipsToAdd = null;
+
     }
 }

@@ -1,8 +1,7 @@
 package application;
 
-import battleship.BattleshipMatch;
 import battleship.Board;
-import battleship.ship.Ship;
+import ship.Ship;
 
 public class UI {
     public static void drawBoard(Board board) {

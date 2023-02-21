@@ -1,4 +1,4 @@
-package battleship.ship;
+package ship;
 
 public class Ship {
     private Position position;
