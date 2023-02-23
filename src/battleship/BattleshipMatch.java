@@ -45,8 +45,8 @@ public class BattleshipMatch {
 
     public List<Ship> initializeShipsToAdd() {
         shipsToAdd.add(new Ship(new Position(), 1));
-       /* shipsToAdd.add(new Ship(new Position(), 1));
         shipsToAdd.add(new Ship(new Position(), 1));
+        /*shipsToAdd.add(new Ship(new Position(), 1));
         shipsToAdd.add(new Ship(new Position(), 1));
         shipsToAdd.add(new Ship(new Position(), 1));
         shipsToAdd.add(new Ship(new Position(), 2));

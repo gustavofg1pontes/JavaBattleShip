@@ -17,6 +17,5 @@ public class Main {
         match.changePlayer(sc);
         match.getCurrentBoard().addShips(shipsToAdd, sc);
         shipsToAdd = null;
-
     }
 }
