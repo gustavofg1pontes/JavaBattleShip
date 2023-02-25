@@ -16,6 +16,12 @@ public class Main {
         match.getCurrentBoard().addShips(shipsToAdd, sc);
         match.changePlayer(sc);
         match.getCurrentBoard().addShips(shipsToAdd, sc);
-        shipsToAdd = null;
+        shipsToAdd.clear();
+
+        while(!match.getWinner()){
+            UI.drawBoard(match.getCurrentBoard());
+            match.makePlay(sc);
+            match.changePlayer(sc);
+        }
     }
 }
