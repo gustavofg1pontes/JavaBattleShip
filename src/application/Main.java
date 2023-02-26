@@ -13,15 +13,19 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //adding ships
-        match.getCurrentBoard().addShips(shipsToAdd, sc);
+        match.getCurrentBoard().addShips(shipsToAdd, sc, match);
         match.changePlayer(sc);
-        match.getCurrentBoard().addShips(shipsToAdd, sc);
+        match.getCurrentBoard().addShips(shipsToAdd, sc, match);
         shipsToAdd.clear();
 
+        match.changePlayer(sc);
+
         while(!match.getWinner()){
-            UI.drawBoard(match.getCurrentBoard());
-            match.makePlay(sc);
-            match.changePlayer(sc);
+            Ship s = match.makePlay(sc);
+            if(!match.getWinner()) match.changePlayer(sc);
         }
+
+        UI.clearScreen();
+        System.out.println("Player " + match.getPlayer() + " won!");
     }
 }
