@@ -34,10 +34,13 @@ public class Board {
                     sp.setValues(s.getPosition(), pos.charAt(0), Integer.parseInt(pos.substring(1, 3)));
                     s.setPosition(sp.transformToPosition());
                 }
-                if(board[s.getPosition().getX()][s.getPosition().getY()] != null){
-                    sp.setValues(null, 'z', 0);
-                    System.out.println("There is already a ship in that position!");
-                    sc.nextLine();
+                if (sp.isShipPositionValid()) {
+                    if (board[s.getPosition().getX()][s.getPosition().getY()] != null) {
+                        //set the sp position to invalid if the position is already occupied
+                        sp.setValues(null, 'z', 0);
+                        System.out.println("There is already a ship in that position!");
+                        sc.nextLine();
+                    }
                 }
             } while (!sp.isShipPositionValid());
             board[s.getPosition().getX()][s.getPosition().getY()] = s;

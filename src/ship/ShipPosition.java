@@ -28,7 +28,7 @@ public class ShipPosition extends Position {
     }
 
     public boolean isShipPositionValid() {
-        return this.positionLetter() >= 1 && this.positionLetter() <= 10 && this.num >= 1 && this.num <= 10;
+        return this.positionLetter() >= 0 && this.positionLetter() <= 10 && this.num >= 1 && this.num <= 10;
     }
 
     public char getCh() {

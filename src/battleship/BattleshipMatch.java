@@ -26,10 +26,6 @@ public class BattleshipMatch {
         return winner;
     }
 
-    public void setWinner(boolean winner) {
-        this.winner = winner;
-    }
-
     public int getPlayer() {
         return player;
     }
@@ -76,7 +72,7 @@ public class BattleshipMatch {
         return ship;
     }
 
-    public boolean isThereAWinner(Board board){
+    public void isThereAWinner(Board board){
         int quantityOccupied = board.getBoard().length * board.getBoard().length;
         for (int i = 0; i < board.getBoard().length; i++) {
             for (int j = 0; j < board.getBoard().length; j++) {
@@ -84,7 +80,6 @@ public class BattleshipMatch {
             }
         }
         winner = quantityOccupied == 0;
-        return winner;
     }
     public Board getCurrentBoard() {
         return (this.player == 1) ? board1 : board2;
@@ -95,16 +90,17 @@ public class BattleshipMatch {
     }
 
     public List<Ship> initializeShipsToAdd() {
-        shipsToAdd.add(new Ship(new Position(), 1));
-        shipsToAdd.add(new Ship(new Position(), 1));
-        /*shipsToAdd.add(new Ship(new Position(), 1));
-        shipsToAdd.add(new Ship(new Position(), 1));
-        shipsToAdd.add(new Ship(new Position(), 1));
-        shipsToAdd.add(new Ship(new Position(), 2));
-        shipsToAdd.add(new Ship(new Position(), 2));
-        shipsToAdd.add(new Ship(new Position(), 2));
-        shipsToAdd.add(new Ship(new Position(), 3));
-        shipsToAdd.add(new Ship(new Position(), 3));*/
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
+        shipsToAdd.add(new Ship(new Position()));
         return shipsToAdd;
     }
 }
